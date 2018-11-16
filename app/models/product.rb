@@ -1,5 +1,6 @@
 class Product < ApplicationRecord
-# belongs_to
-# validates
-  monetize :price_cents
+  belongs_to :category
+
+  # validates
+    monetize :price_cents
 end

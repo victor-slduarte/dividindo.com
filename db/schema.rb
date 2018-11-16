@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_16_025837) do
+ActiveRecord::Schema.define(version: 2018_11_16_042800) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 2018_11_16_025837) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "product_id"
+    t.integer "order_value_cents", default: 0, null: false
     t.index ["product_id"], name: "index_product_orders_on_product_id"
   end
 
@@ -42,6 +43,7 @@ ActiveRecord::Schema.define(version: 2018_11_16_025837) do
     t.integer "avg_price_cents", default: 0, null: false
     t.integer "price_goal_cents", default: 0, null: false
     t.bigint "category_id"
+    t.integer "initial_price_cents", default: 0, null: false
     t.index ["category_id"], name: "index_products_on_category_id"
   end
 

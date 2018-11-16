@@ -5,6 +5,8 @@ Rails.application.routes.draw do
 
   resources :products
   resources :categories
+  resources :product_orders
+
 
 
 end
